@@ -1,19 +1,19 @@
 [data-theme="light"] {
-  --color-primary: theme("colors.pink.500");
-  --color-secondary: theme("colors.indigo.500");
-  --color-text: theme("colors.gray.900");
-  --color-text-offset: theme("colors.gray.600");
-  --color-background: theme("colors.gray.50");
-  --color-background-offset: theme("colors.gray.100");
-  --color-border: theme("colors.gray.900" / 10%);
+  --color-primary: theme("colors.blue.700"); /* 深い青で宇宙感 */
+  --color-secondary: theme("colors.purple.400"); /* 柔らかいパープル */
+  --color-text: theme("colors.gray.900"); /* メインのテキストカラーは黒に近いグレー */
+  --color-text-offset: theme("colors.gray.600"); /* サブのテキストカラーは少し薄いグレー */
+  --color-background: theme("colors.gray.50"); /* 背景は白に近いグレー */
+  --color-background-offset: theme("colors.gray.100"); /* 背景のオフセットカラーもライトなグレー */
+  --color-border: theme("colors.gray.900" / 10%); /* 透明度を持たせた薄いボーダー */
 }
 
 [data-theme="dark"] {
-  --color-primary: theme("colors.pink.400");
-  --color-secondary: theme("colors.indigo.400");
-  --color-text: theme("colors.gray.50");
-  --color-text-offset: theme("colors.gray.400");
-  --color-background: theme("colors.gray.900");
-  --color-background-offset: theme("colors.gray.800");
-  --color-border: theme("colors.gray.50" / 10%);
+  --color-primary: theme("colors.blue.600"); /* 夜空をイメージした落ち着いたブルー */
+  --color-secondary: theme("colors.purple.500"); /* ダークモードではより鮮やかなパープル */
+  --color-text: theme("colors.gray.100"); /* 白に近いグレー */
+  --color-text-offset: theme("colors.gray.400"); /* 少し暗いグレーでサブテキスト */
+  --color-background: theme("colors.gray.900"); /* 黒に近いダークグレーで夜空を表現 */
+  --color-background-offset: theme("colors.gray.800"); /* 若干明るめのダークグレー */
+  --color-border: theme("colors.gray.100" / 10%); /* ダークモードのボーダーも薄い色に */
 }

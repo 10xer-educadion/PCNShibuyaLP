@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const details: Array<FeatureItem> = [
+  {
+    title: "プログラミングの楽しさを知る機会",
+    description:
+      "大人の先入観ではなく、子どもたち自身がプログラミングの楽しさを発見します。",
+    icon: "mdi:lightbulb-on-outline",
+  },
+  {
+    title: "地域社会に貢献する機会",
+    description:
+      "積極的に地域のイベントに参加し、ものづくりを通じて交流を深めます。",
+    icon: "mdi:charity",
+  },
+  {
+    title: "技術の可能性を体験する機会",
+    description:
+      "技術は想像より身近にあり、自分の世界を広げる強力な手段であることに気づきます。",
+    icon: "mdi:cube-outline",
+  },
+];
+---
+
+<ContentSection title="活動内容" id="details">
+  <Fragment slot="lead">
+    ワークショップの開催や、地域イベントへの参加を通じて、さまざまな<span class="text-primary">機会</span>の提供を目指しています。
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      details.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} class="size-full" />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

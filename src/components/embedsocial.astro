@@ -1,0 +1,15 @@
+---
+import ContentSection from "~/components/content-section.astro";
+const embedUrl = 'https://embedsocial.com/api/pro_hashtag/de13e0832bec5da5f513d76f5570bb7e46d4d62e';
+---
+
+<ContentSection title="Instagram" id="insta">
+    <Fragment slot="lead">
+        活動記録は<span class="text-primary">フィード投稿</span>、最新情報は<span class="text-primary">ストーリー</span>にて発信しています。
+      </Fragment>
+    <iframe
+        src={embedUrl}
+        width="100%"
+        height="600px"
+    ></iframe>
+</ContentSection>

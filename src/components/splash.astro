@@ -1,9 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
-import astronautImage from "~/assets/astronaut.png";
-import HeroImage from "~/components/hero-image.astro";
-import Starfield from "~/components/starfield.astro";
+import stlImage from "~/assets/sakana.png";
+import homeGif from "~/assets/iraira.gif";
 import GitHubCorner from "./github-corner.astro";
 
 const widths = [450, 800];
@@ -11,31 +9,29 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <section class="relative h-full bg-black">
-  <Starfield />
+  <Image src={homeGif} alt="GIF" class="absolute inset-0 h-full w-full object-cover" />
   <GitHubCorner />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
   </div>
   <div class="relative grid h-full place-items-center sm:grid-cols-2">
-    <h2
-      class="flex flex-col items-center gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
-      <Icon name="logomark" class="size-20 text-white md:size-32" />
-      <div
-        class="gradient-text text-center font-extrabold tracking-tighter text-6xl md:text-8xl"
-      >
-        Build fast
-        <br /> websites,
-        <br /> faster.
+    <h2 class="flex flex-col items-center gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end">
+      <div class="gradient-text text-left font-extrabold tracking-tighter text-5xl md:text-7xl leading-none">
+        遊ぶように
+        <span class="text-6xl md:text-8xl block text-cyan-400">学び</span>
+      </div>
+      <div class="gradient-text text-left font-extrabold tracking-tighter text-5xl md:text-7xl leading-none">
+        創るように
+        <span class="text-6xl md:text-8xl block text-indigo-600">深める</span>
       </div>
     </h2>
+    
     <div
       id="astronaut"
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
       <Image
         class="h-full w-full object-cover"
-        src={astronautImage}
+        src={stlImage}
         widths={widths}
         sizes={sizes}
         loading="eager"
