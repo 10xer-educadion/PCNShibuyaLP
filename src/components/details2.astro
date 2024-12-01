@@ -1,0 +1,102 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const details: Array<FeatureItem> = [
+  {
+    title: "販売業者の名称",
+    description: "株式会社Livspect",
+    icon: "mdi:store",
+  },
+  {
+    title: "所在地",
+    description: "〒150-0021 東京都渋谷区恵比寿西2-4-8\nウィンド恵比寿ビル8F",
+    icon: "mdi:map-marker",
+  },
+  {
+    title: "電話番号",
+    description: "03-4500-1997\n受付時間: 平日10:00〜18:00（土日祝を除く）",
+    icon: "mdi:phone",
+  },
+  {
+    title: "メールアドレス",
+    description: "info@livspect.com",
+    icon: "mdi:email",
+  },
+  {
+    title: "運営統括責任者",
+    description: "松井優知",
+    icon: "mdi:account-tie",
+  },
+  {
+    title: "追加手数料等の追加料金",
+    description: "システム利用料: 無料\n支払手数料: 無料",
+    icon: "mdi:cash-multiple",
+  },
+  {
+    title: "返金ポリシー",
+    description: "お客様都合: 購入後の返金は不可\n当社都合: チケット代金を全額返金",
+    icon: "mdi:cancel",
+  },
+  {
+    title: "引渡時期",
+    description: "購入手続き完了後、即時に電子チケットとしてお客様のアカウントに反映",
+    icon: "mdi:ticket-confirmation",
+  },
+  {
+    title: "受け付け可能な決済手段",
+    description: "クレジットカード、ハチペイ、現金",
+    icon: "mdi:credit-card",
+  },
+  {
+    title: "決済期間",
+    description: "クレジットカード: 即時処理\nその他: 現地決済",
+    icon: "mdi:clock-fast",
+  },
+  {
+    title: "販売価格",
+    description: "1枚/1h: ¥2,200（税込）",
+    icon: "mdi:currency-jpy",
+  },
+  {
+    title: "販売数量の制限",
+    description: "最小購入単位: 8枚",
+    icon: "mdi:clock-outline",
+  },
+  {
+    title: "有効期限",
+    description: "購入日より6ヶ月間有効",
+    icon: "mdi:calendar-clock",
+  },
+  {
+    title: "チケットの特性",
+    description: "通常出席及び当日無断欠席の場合のみチケット消費あり",
+    icon: "mdi:ticket-percent",
+  },
+  {
+    title: "不良品の取り扱い",
+    description: "チケット情報に不備がある場合、速やかに修正対応を行います。",
+    icon: "mdi:alert-circle-outline",
+  },
+];
+---
+
+<ContentSection title="特定商取引法に基づく表記" id="legal-notice">
+  <Fragment slot="lead">
+    特定商取引法に基づく表記
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      details.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} class="size-full" />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm" style="white-space: pre-line;">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
